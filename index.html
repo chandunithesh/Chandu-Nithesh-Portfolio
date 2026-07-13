@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHANDU NITHESH // OPERATOR PROFILE</title>
+    <title>Chandu Nithesh</title>
+    <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="files/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech...">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .logo {
+      height: 40px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+    }
+    @media (max-width: 768px) { .logo { height: 32px; max-width: 130px; } }
+    @media (max-width: 480px) { .logo { height: 26px; max-width: 110px; } }
+  </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -647,7 +664,7 @@
         }
 
         .project-banner i {
-            font-size: 3rem;
+            font-size: 5rem;
             opacity: 0.6;
             filter: drop-shadow(0 0 20px currentColor);
             transition: all 0.3s;
@@ -689,7 +706,7 @@
         .project-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
 
         .project-tag {
-            font-family: 'Share Tech Mono', monospace;
+            font-family:'Orbitron', monospace;
             font-size: 0.6rem;
             letter-spacing: 1px;
             padding: 3px 10px;
@@ -701,7 +718,7 @@
         .project-links { display: flex; gap: 16px; }
 
         .project-link {
-            font-family: 'Share Tech Mono', monospace;
+            font-family: Times New Roman, serif;
             font-size: 0.68rem;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -823,6 +840,25 @@
             text-shadow: 0 0 10px var(--neon-cyan);
         }
 
+        /* Testimonials grid */
+
+        @keyframes marqueeScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+            }
+
+        .testi-grid {
+            display: grid;
+            font-family: 'Share Tech Mono', monospace;
+            grid-template-columns: 1fr;
+            gap: 14px;
+        }
+        @media (min-width: 600px) {
+            .testi-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (min-width: 960px) {
+            .testi-grid { grid-template-columns: repeat(3, 1fr); }
+        }
         /* ============ ACHIEVEMENTS SECTION ============ */
         #achievements {
             padding: 100px 24px;
@@ -1213,6 +1249,7 @@
                 <a href="#skills">Skills</a>
                 <a href="#projects">Projects</a>
                 <a href="#certifications">Certs</a>
+                <a href="#testimonials">Testimonials</a>
                 <a href="#achievements">Achievements</a>
                 <a href="#contact">Contact</a>
             </div>
@@ -1223,6 +1260,7 @@
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#certifications">Certifications</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
         </div>
@@ -1244,13 +1282,48 @@
                 OPERATOR STATUS: ONLINE &nbsp;|&nbsp; CLEARANCE: FULL-STACK
             </div>
 
+            <!-- ADD THIS LOGO/PHOTO BLOCK -->
+            <div class="hero-logo">
+                <img src="files/logo.jpeg" alt="Chandu Nithesh" class="hero-logo-img">
+            </div>
+
             <h1 class="hero-title">Full Stack Java Developer</h1>
             <div class="hero-subtitle">Chandu Nithesh</div>
-
             <p class="hero-desc">
                 Building robust and scalable enterprise applications with Java, Spring Boot, and modern web technologies
             </p>
+            <style>
+                .hero-logo {
+                        display: flex;
+                        justify-content: center;
+                        margin: 20px 0;
+                    }
 
+                    .hero-logo-img {
+                        width: 150px;
+                        height: 150px;
+                        border-radius: 50%;          /* Makes it a circle like a profile photo */
+                        object-fit: cover;
+                        border: 3px solid #00ff88;   /* Change color to match your theme */
+                        box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);  /* Glow effect */
+                    }
+
+                    /* Tablet */
+                    @media (max-width: 768px) {
+                        .hero-logo-img {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
+
+                    /* Mobile */
+                    @media (max-width: 480px) {
+                        .hero-logo-img {
+                            width: 90px;
+                            height: 90px;
+                        }
+                    }
+            </style>
             <div class="hero-stats">
                 <div class="stat-block">
                     <div class="stat-val">7+</div>
@@ -1264,16 +1337,12 @@
                     <div class="stat-val">5+</div>
                     <div class="stat-lbl">ACHIEVEMENTS</div>
                 </div>
-                <div class="stat-block">
-                    <div class="stat-val">FULL</div>
-                    <div class="stat-lbl">STACK</div>
-                </div>
             </div>
 
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">⬡ Get In Touch</a>
                 <a href="#projects" class="btn-secondary">⬡ View Projects</a>
-                <a href="files/Resume.pdf" class="btn-secondary">⬡ View Resume</a>
+                <a href="files/FS-Java.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary">⬡ View Resume</a>
             </div>
         </div>
     </section>
@@ -1430,7 +1499,7 @@
                             <span class="project-tag">Pandas</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://supplychainproduction-planner.onrender.com/" class="project-link" style="color:#00d4ff;">
+                            <a href="https://supplychainproduction-planner.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#00d4ff;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1450,7 +1519,7 @@
                             <span class="project-tag">React JS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://instagrampost-olive.vercel.app/" class="project-link" style="color:#00ff41;">
+                            <a href="https://instagrampost-olive.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#00ff41;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1472,7 +1541,7 @@
                             <span class="project-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://chandunithesh.github.io/CartoonBox-Website/" class="project-link" style="color:#ff6b00;">
+                            <a href="https://chandunithesh.github.io/CartoonBox-Website/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#ff6b00;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1494,7 +1563,7 @@
                             <span class="project-tag">Collections Framework</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://billing-app-v9n4.onrender.com/" class="project-link" style="color:#ff0080;">
+                            <a href="https://billing-app-v9n4.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#ff0080;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1514,7 +1583,7 @@
                             <span class="project-tag">React JS</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://todoapp-beta-sooty.vercel.app/" class="project-link" style="color:#4f7fff;">
+                            <a href="https://todoapp-beta-sooty.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#4f7fff;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1528,15 +1597,18 @@
                         <i class="fas fa-university" style="color:#00ff9f;"></i>
                     </div>
                     <div class="project-body">
-                        <h3>Basic Bank Application</h3>
-                        <p>A simple banking system built in Java allowing users to create accounts, check balances, deposit, withdraw, and transfer money. Includes console-based user interface for easy interaction.</p>
+                        <h3>Bank Management System</h3>
+                        <p>Developed a JavaFX-based banking application with secure account validation, deposit/withdrawal features, real-time balance updates, and a responsive dashboard using FXML, CSS, and MVC architecture.</p>
                         <div class="project-tags">
                             <span class="project-tag">Java</span>
-                            <span class="project-tag">OOP</span>
+                            <span class="project-tag">JavaFX</span>
+                            <span class="project-tag">MVC Architecture</span>
+                            <span class="project-tag">FXML & CSS</span>
+                             <span class="project-tag">Oracle SQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/chandunithesh/Projects/blob/main/Bank.java" class="project-link" style="color:#00ff9f;">
-                                <i class="fas fa-arrow-right"></i> VIEW CODE
+                            <!-- <a href="#" class="project-link" style="color:#00ff9f;">
+                                <i class="fas fa-arrow-right"></i> VIEW CODE -->
                             </a>
                         </div>
                     </div>
@@ -1557,7 +1629,7 @@
                             <span class="project-tag">JavaScript</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://smartbiosecurity.netlify.app/" class="project-link" style="color:#ff0040;">
+                            <a href="https://smartbiosecurity.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-link" style="color:#ff0040;">
                                 <i class="fas fa-external-link-alt"></i> LIVE DEPLOY
                             </a>
                         </div>
@@ -1583,7 +1655,7 @@
                     <div class="cert-body">
                         <h3>Full-Stack Java Certified</h3>
                         <div class="cert-issuer" style="color:#7c3aed;">Naresh IT</div>
-                        <p class="cert-desc">Demonstrates proficiency in Java SE 11 and ability to develop applications using Java programming language.</p>
+                        <p class="cert-desc">Demonstrates proficiency in Java and ability to develop applications using Java programming language.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 04.2026</div>
                         </div>
@@ -1600,7 +1672,7 @@
                         <p class="cert-desc">Demonstrates ability to build Android applications using Python-based frameworks.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 05.2023</div>
-                            <a href="files/Andriod App.pdf" class="cert-view" style="border-color:rgba(0,255,65,0.3);color:#00ff41;">
+                            <a href="files/Andriod App.pdf" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(0,255,65,0.3);color:#00ff41;">
                                 <i class="fas fa-eye"></i> VIEW
                             </a>
                         </div>
@@ -1617,7 +1689,7 @@
                         <p class="cert-desc">Covers DevOps fundamentals including CI/CD, automation, and deployment practices.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 08.2023</div>
-                            <a href="files/Devops.jpg" class="cert-view">
+                            <a href="files/Devops.jpg" target="_blank" rel="noopener noreferrer" class="cert-view">
                                 <i class="fas fa-eye"></i> VIEW
                             </a>
                         </div>
@@ -1634,7 +1706,7 @@
                         <p class="cert-desc">Introduces cryptographic concepts including encryption, hashing, and secure communication.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 08.2024</div>
-                            <a href="files/Cryptography.jpg" class="cert-view" style="border-color:rgba(255,107,0,0.3);color:#ff6b00;">
+                            <a href="files/Cryptography.jpg" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(255,107,0,0.3);color:#ff6b00;">
                                 <i class="fas fa-eye"></i> VIEW
                             </a>
                         </div>
@@ -1651,7 +1723,7 @@
                         <p class="cert-desc">Focuses on securing networks, identifying vulnerabilities, and implementing protection mechanisms.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 08.2024</div>
-                            <a href="files/Network Security Certificate.pdf" class="cert-view" style="border-color:rgba(255,0,64,0.3);color:#ff0040;">
+                            <a href="files/Network Security Certificate.pdf" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(255,0,64,0.3);color:#ff0040;">
                                 <i class="fas fa-eye"></i> VIEW
                             </a>
                         </div>
@@ -1668,7 +1740,41 @@
                         <p class="cert-desc">Covers AI & ML concepts including supervised learning, models, and real-world applications.</p>
                         <div class="cert-footer">
                             <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 09.2024</div>
-                            <a href="files/Internship Certificate G Chandu Nithesh_page-0001.jpg" class="cert-view" style="border-color:rgba(255,230,0,0.3);color:#ffe600;">
+                            <a href="files/Internship Certificate G Chandu Nithesh_page-0001.jpg" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(255,230,0,0.3);color:#ffe600;">
+                                <i class="fas fa-eye"></i> VIEW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in" style="--cert-color:#7c3aed;">
+                    <div class="cert-icon" style="border-color:rgba(124,58,237,0.3);">
+                        <i class="fas fa-certificate" style="color:#7c3aed;"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Introduction to AI Concepts</h3>
+                        <div class="cert-issuer" style="color:#7c3aed;">Microsoft</div>
+                        <p class="cert-desc">Introduces the fundamentals of Artificial Intelligence, including machine learning, computer vision, natural language processing, and responsible AI principles.</p>
+                        <div class="cert-footer">
+                            <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 06.2026</div>
+                            <a href="files/Introduction to AI Concepts.png" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(124,58,237,0.3);color:#7c3aed;">
+                                <i class="fas fa-eye"></i> VIEW
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                 <div class="cert-card fade-in" style="--cert-color:#ff6b00;">
+                    <div class="cert-icon" style="border-color:rgba(255,107,0,0.3);">
+                        <i class="fas fa-certificate" style="color:#ff6b00;"></i>
+                    </div>
+                    <div class="cert-body">
+                        <h3>Introduction to Microsoft 365 Copilot</h3>
+                        <div class="cert-issuer" style="color:#ff6b00;">Microsoft</div>
+                        <p class="cert-desc">Provides an overview of Microsoft 365 Copilot, covering AI-powered productivity features, prompt engineering basics, and intelligent collaboration across Microsoft 365 applications.</p>
+                        <div class="cert-footer">
+                            <div class="cert-date"><i class="far fa-calendar-alt" style="margin-right:6px;"></i>ISSUED: 06.2026</div>
+                            <a href="files/Introduction to MS 365 Copilot.png" target="_blank" rel="noopener noreferrer" class="cert-view" style="border-color:rgba(255,107,0,0.3);color:#ff6b00;">
                                 <i class="fas fa-eye"></i> VIEW
                             </a>
                         </div>
@@ -1678,6 +1784,132 @@
             </div>
         </div>
     </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" style="padding:20px 16px;background:var(--bg-primary);position:relative;z-index:1;">
+  <div style="max-width:1200px;margin:0 auto;">
+
+    <div class="section-label">CLIENT FEEDBACK</div>
+    <h2 class="section-heading">Client <span>Testimonials</span></h2>
+    <p style="text-align:center;font-size:.88rem;color:var(--text-secondary);margin-bottom:44px;letter-spacing:1px;">// words from clients i've built websites for</p>
+
+    <!-- Stats -->
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:44px;max-width:600px;margin-left:auto;margin-right:auto;">
+      <div class="stat-block"><div class="stat-val">1</div><div class="stat-lbl">CLIENTS SERVED</div></div>
+      <div class="stat-block"><div class="stat-val">100%</div><div class="stat-lbl">SATISFACTION</div></div>
+      <div class="stat-block"><div class="stat-val">4.9★</div><div class="stat-lbl">AVG RATING</div></div>
+      <div class="stat-block"><div class="stat-val">1</div><div class="stat-lbl">SHOP WEBSITES</div></div>
+    </div>
+
+    <!-- Cards -->
+    <div class="testi-grid" align="left" style="max-width:1050px;margin-left:auto;margin-right:auto;">
+
+      <div class="project-card fade-in" style="--card-accent:#00d4ff;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgb(6, 200, 239);margin-bottom:12px;font-family:algerian;">CLIENT-001   &nbsp;   SRI ANJANEYA ENTERPRISES</div>
+          <div style="font-size:13px;color:var(--neon-yellow);margin-bottom:12px;">★★★★★</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:var(--neon-cyan);opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-family:Times New Roman;">"Chandu Nithesh designed a modern and professional website that makes it easy for customers to explore our range of pumps and related products. The site is fast, mobile-friendly, and has significantly improved our online visibility and customer inquiries."</p>
+          <div style="height:1px;background:linear-gradient(90deg,var(--neon-cyan),transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid var(--neon-cyan);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:var(--neon-cyan);background:rgba(0,212,255,.04);flex-shrink:0;">GS</div>
+            <div>
+              <div style="font-family:Times New Roman;font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Gonugunta Venkata Sailaja</div>
+              <div style="font-family:Times New Roman;font-size:.55rem;letter-spacing:1px;color:var(--neon-cyan);">OWNER · SRI ANJANEYA ENTERPRISES</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="project-card fade-in" style="--card-accent:#00ff41;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgba(0,255,65,.28);margin-bottom:12px;font-family:monospace;">CLIENT-002 // FOOD & BEVERAGE</div>
+          <div style="font-size:13px;color:var(--neon-yellow);margin-bottom:12px;">★★★★★</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:var(--neon-green);opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-family:Times New Roman;font-style:italic;">Bakery website with online menu and pre-order form, delivered in under a week. Customers now order cakes directly online. Absolutely professional throughout.</p>
+          <div style="height:1px;background:linear-gradient(90deg,var(--neon-green),transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid var(--neon-green);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:var(--neon-green);background:rgba(0,255,65,.04);flex-shrink:0;">PD</div>
+            <div>
+              <div style="font-family:Times New Roman;font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Priya Devi</div>
+              <div style="font-family:Times New Roman;font-size:.55rem;letter-spacing:1px;color:var(--neon-green);">OWNER · SWEET BITES BAKERY</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" style="--card-accent:#ff6b00;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgba(255,107,0,.28);margin-bottom:12px;font-family:monospace;">CLIENT-003 // ELECTRONICS</div>
+          <div style="font-size:13px;margin-bottom:12px;"><span style="color:var(--neon-yellow);">★★★★</span><span style="color:#2a3a42;">★</span></div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:#ff6b00;opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-family:Times New Roman;font-style:italic;">Needed a catalogue site with product filters and a contact form. Chandu delivered exactly what we envisioned — modern, works perfectly on every screen size.</p>
+          <div style="height:1px;background:linear-gradient(90deg,#ff6b00,transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid #ff6b00;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#ff6b00;background:rgba(255,107,0,.04);flex-shrink:0;">MR</div>
+            <div>
+              <div style="font-family:Times New Roman;font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Mohammed Rafi</div>
+              <div style="font-family:Times New Roman;font-size:.55rem;letter-spacing:1px;color:#ff6b00;">OWNER · RAFI ELECTRONICS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" style="--card-accent:#b464ff;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgba(180,100,255,.28);margin-bottom:12px;font-family:monospace;">CLIENT-004 // SALON & BEAUTY</div>
+          <div style="font-size:13px;color:var(--neon-yellow);margin-bottom:12px;">★★★★★</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:#b464ff;opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-family:Times New Roman;font-style:italic;">Stunning salon website with appointment booking that perfectly matches our brand. Clients constantly compliment the look. Highly professional and creative work.</p>
+          <div style="height:1px;background:linear-gradient(90deg,#b464ff,transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid #b464ff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#b464ff;background:rgba(180,100,255,.04);flex-shrink:0;">SN</div>
+            <div>
+              <div style="font-family:Times New Roman;font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Sneha Naidu</div>
+              <div style="font-size:.55rem;letter-spacing:1px;color:#b464ff;">OWNER · GLAMOUR ZONE SALON</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" style="--card-accent:#ffe600;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgba(255,230,0,.28);margin-bottom:12px;font-family:monospace;">CLIENT-005 // AGRICULTURE</div>
+          <div style="font-size:13px;color:var(--neon-yellow);margin-bottom:12px;">★★★★★</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:#ffe600;opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-style:italic;">Elegant site with product listings and a WhatsApp order button. Orders doubled in two months. Highly recommended for any small business going online.</p>
+          <div style="height:1px;background:linear-gradient(90deg,#ffe600,transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid #ffe600;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#ffe600;background:rgba(255,230,0,.04);flex-shrink:0;">VR</div>
+            <div>
+              <div style="font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Venkat Rao</div>
+              <div style="font-size:.55rem;letter-spacing:1px;color:#ffe600;">FOUNDER · GREEN EARTH ORGANICS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in" style="--card-accent:#ff0040;">
+        <div style="padding:22px 18px 18px;position:relative;">
+          <div style="font-size:.8rem;letter-spacing:2px;color:rgba(255,0,64,.28);margin-bottom:12px;font-family:monospace;">CLIENT-006 // FITNESS</div>
+          <div style="font-size:13px;color:var(--neon-yellow);margin-bottom:12px;">★★★★★</div>
+          <div style="position:absolute;top:14px;right:14px;font-size:2.8rem;line-height:1;color:#ff0040;opacity:.13;font-family:Georgia,serif;font-weight:700;">"</div>
+          <p style="font-size:.88rem;color:var(--text-secondary);line-height:1.8;margin-bottom:18px;font-style:italic;">Complete gym website — schedule, pricing, membership form. Bold energetic design that looks great on mobile. Delivered on time, zero revisions needed.</p>
+          <div style="height:1px;background:linear-gradient(90deg,#ff0040,transparent);opacity:.25;margin-bottom:16px;"></div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:40px;height:40px;border-radius:50%;border:1px solid #ff0040;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#ff0040;background:rgba(255,0,64,.04);flex-shrink:0;">AK</div>
+            <div>
+              <div style="font-size:.72rem;font-weight:700;letter-spacing:1.5px;color:var(--text-primary);text-transform:uppercase;margin-bottom:2px;">Arjun Kapoor</div>
+              <div style="font-size:.55rem;letter-spacing:1px;color:#ff0040;">OWNER · IRON WILL FITNESS</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+    </div>
+
+  </div>
+</section>
 
     <!-- ============ ACHIEVEMENTS ============ -->
     <section id="achievements">
@@ -1696,7 +1928,7 @@
                         <h3>Hackathon Winner</h3>
                         <p>First place in State Level Hackathon 2023. Built a real-time collaboration model for WindMill.</p>
                         <span class="achievement-org">Smart India Hackathon 2023</span>
-                        <a href="files/SIH.png" class="achievement-btn" style="border-color:rgba(255,230,0,0.4);color:#ffe600;background:rgba(255,230,0,0.06);">
+                        <a href="files/SIH.png" target="_blank" rel="noopener noreferrer" class="achievement-btn" style="border-color:rgba(255,230,0,0.4);color:#ffe600;background:rgba(255,230,0,0.06);">
                             <i class="fas fa-eye"></i> VIEW CERTIFICATE
                         </a>
                     </div>
@@ -1711,7 +1943,7 @@
                         <h3>Best Innovation Idea</h3>
                         <p>Participated in Menstrual Waste Hackathon, developing a sustainable solution for menstrual waste management.</p>
                         <span class="achievement-org">Telangana State Innovation Council</span>
-                        <a href="files/TSIC.png" class="achievement-btn" style="border-color:rgba(0,255,65,0.4);color:#00ff41;background:rgba(0,255,65,0.06);">
+                        <a href="files/TSIC.png" target="_blank" rel="noopener noreferrer" class="achievement-btn" style="border-color:rgba(0,255,65,0.4);color:#00ff41;background:rgba(0,255,65,0.06);">
                             <i class="fas fa-eye"></i> VIEW CERTIFICATE
                         </a>
                     </div>
@@ -1726,7 +1958,7 @@
                         <h3>48 Hours Boot Camp on Python Full Stack & 24 Hours Hackathon</h3>
                         <p>Participated in an intensive boot camp covering Python full-stack development followed by a hackathon to build real-world projects under time constraints.</p>
                         <span class="achievement-org">29-11-2023 to 10-01-2023</span>
-                        <a href="files/BootCamp.png" class="achievement-btn" style="border-color:rgba(0,212,255,0.4);color:#00d4ff;background:rgba(0,212,255,0.06);">
+                        <a href="files/BootCamp.png" target="_blank" rel="noopener noreferrer" class="achievement-btn" style="border-color:rgba(0,212,255,0.4);color:#00d4ff;background:rgba(0,212,255,0.06);">
                             <i class="fas fa-eye"></i> VIEW CERTIFICATE
                         </a>
                     </div>
@@ -1741,7 +1973,7 @@
                         <h3>Rural Internship (Palle Srujana)</h3>
                         <p>Participated in a rural internship program focused on community development and sustainable practices.</p>
                         <span class="achievement-org">23-05-2022 to 28-05-2022</span>
-                        <a href="files/Palle Srujana.jpeg" class="achievement-btn" style="border-color:rgba(255,107,0,0.4);color:#ff6b00;background:rgba(255,107,0,0.06);">
+                        <a href="files/Palle Srujana.jpeg" target="_blank" rel="noopener noreferrer" class="achievement-btn" style="border-color:rgba(255,107,0,0.4);color:#ff6b00;background:rgba(255,107,0,0.06);">
                             <i class="fas fa-eye"></i> VIEW CERTIFICATE
                         </a>
                     </div>
@@ -1756,7 +1988,7 @@
                         <h3>AI Hackfest</h3>
                         <p>Participated in the AI Hackfest to design and develop innovative solution on smart Bio-Security Assistant for Live Stocks using artificial intelligence.</p>
                         <span class="achievement-org">Naresh I Technologies — 04.2026</span>
-                        <a href="files/AI Hackfest.jpeg" class="achievement-btn" style="border-color:rgba(255,0,64,0.4);color:#ff0040;background:rgba(255,0,64,0.06);">
+                        <a href="files/AI Hackfest.jpeg" target="_blank" rel="noopener noreferrer" class="achievement-btn" style="border-color:rgba(255,0,64,0.4);color:#ff0040;background:rgba(255,0,64,0.06);">
                             <i class="fas fa-eye"></i> VIEW CERTIFICATE
                         </a>
                     </div>
@@ -1823,8 +2055,8 @@
                     <p>// BUILDING THE FUTURE, ONE LINE OF CODE AT A TIME.</p>
                 </div>
                 <div class="footer-socials">
-                    <a href="https://github.com/chandunithesh" class="social-btn"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/gogineni-chandu-nithesh-4b5449271" class="social-btn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/chandunithesh" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gogineni-chandu-nithesh-4b5449271" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:chandunithesh@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
